@@ -17,8 +17,8 @@ $dbserver="localhost"
 $errorLogPath = "C:\MySQLBackups\MySQL"
 $backupfolder = "C:\MySQLBackups\MySQL\"
 $netbackupfolder = "\\192.168.x.x\<folder>"
-$mysqldumpexe = "C:\Program Files\MySQL\MySQL Server 5.5\bin\mysqldump.exe"
-$datafolder = "C:\Program Files\MySQL\MySQL Server 5.5\data"
+$mysqldumpexe = "C:\Program Files\MySQL\MySQL Server 5.7.18\bin\mysqldump.exe"
+$datafolder = "C:\Program Files\MySQL\MySQL Server 5.7.18\data"
 
 #SMTP Config##############################################
 $smtp = $true #change to $false to turn off emails
@@ -59,7 +59,7 @@ $dbName = $dataSet.Tables[0] | Select -exp Database
 ###Backup Each Database
 Try{
  foreach ($d in $dbName){
-  & $mysqldumpexe --user=$dbuser --password=$dbpass --databases --routines --log-error=$errorLogPath$($d).log $d > "$($backupfolder)$($d)-$($today).sql"
+  & $mysqldumpexe --user=$dbuser --password=$dbpass --databases --routines --log-error=$($errorLogPath)$($d).log $d > "$($backupfolder)$($d)-$($today).sql"
  }
 ###Compress all backups in single FullBackup.$today.zip file
  & $zipper a -tzip "$($backupfolder)FullBackup.$($today).zip" "$backupfolder*.sql"
