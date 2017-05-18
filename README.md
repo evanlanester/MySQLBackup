@@ -1,7 +1,14 @@
 # MySQLBackup
-MySQL Backups on Windows through XAMPP, WAMP or a Standalone MySQL Installation
+MySQL Backups on Windows through XAMPP, WAMP or a Standalone MySQL Installation,
+Uses 7Zip command line to compress scripts and MySQL .Net Connector 6.8.8
 
 This is my first administrative Powershell Script, currently used in a live Windows environment without issue.
+#### Requirements (These are Included)
+You can replace the MySQL .Net Connector if it is uncompatible with your .Net.
+Visit: https://dev.mysql.com/downloads/connector/net/
+
+You will also require 7Zip Commandline
+Visit: http://www.7-zip.org/download.html
 
 ## [XAMPP](https://www.apachefriends.org/index.html) - Apache Distribution containing MariaDB, PHP and Perl 
 | Operating Systems        | Compatibility |     Tested    |
