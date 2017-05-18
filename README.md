@@ -1,5 +1,5 @@
 # MySQLBackup
-MySQL Backups on Windows through XAMPP, WAMP or a Standalone MySQL Installation,
+MySQL Backups on Windows through XAMPP, WAMP or a Standalone MySQL Installation.
 These scripts use 7Zip command line to compress scripts and MySQL .Net Connector 6.8.8
 
 This is my first administrative Powershell Script, currently used in a live Windows environment without issue.
