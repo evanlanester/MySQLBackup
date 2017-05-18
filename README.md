@@ -1,9 +1,27 @@
 # MySQLBackup
 MySQL Backups on Windows through XAMPP, WAMP or a Standalone MySQL Installation
 
-XAMPP - http://www.wampserver.com/en/
-WAMP - https://www.apachefriends.org/index.html
-MySQL - https://www.mysql.com/
+| Operating Systems        | Compatibility |
+| ------------------------ |:-------------:|
+| Windows                  |               |
+| Linux                    |               |
+| MacOS                    |               |
+
+This is my first administrative Powershell Script.
+
+## [XAMPP](https://www.apachefriends.org/index.html) - Apache Distribution containing MariaDB, PHP and Perl 
+
+## [WAMP](http://www.wampserver.com/en/) - Windows, Apache, MySQL and PHP
+
+## [MySQL](https://www.mysql.com/) - Standalone MySQL Database
 
 Each Script works as a background task setup through Windows Task Scheduler
-Powershell.exe -ExecutionPolicy Bypass -File <filepath>\MySQLBackup.ps1
+```Powershell
+Powershell.exe -ExecutionPolicy Bypass -File %filepath%\MySQLBackup.ps1
+```
+Minor configurations within User Config portion of script for the script to work with your deployment.
+
+Now with Powershell on Linux!
+
+## LAMP - Linux, Apache, MySQL and PHP 
+`In Development/Testing Required`
